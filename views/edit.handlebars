@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/public/bower_components/bootstrap/dist/css/bootstrap.css">
+<script src="/public/bower_components/jquery/dist/jquery.js"></script>
+<script src="/public/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+       
+      <a class="navbar-brand" href="/">Article Store</a>
+    
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="navbar-nav mr-auto" href="/">Home |</a>
+          </li>
+          <li class="nav-item active">
+            <a class="navbar-nav" href="/add">    | Add</a>
+         
+          </li>
+   
+        </ul>
+      </div>
+</nav>
+
+
+</head>
+
+<body>
+
+ <div class="container-fluid">
+  <form action="/edit/{{article.id}}" method="POST">
+            Title:<br>
+            <input type="text" name="title" value="{{article.title}}">
+            <br>
+            Author:<br>
+            <input type="text" name="author" value="{{article.author}}">
+            <br>
+            Body:<br>
+            <input type="text" name="body" value="{{article.body}}"><br>
+            <button type="submit">Submit</button>
+</form> 
+
+
+  </div>
+</body>
+  <html>

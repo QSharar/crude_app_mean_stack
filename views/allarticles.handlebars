@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <link rel="stylesheet" href="public/bower_components/bootstrap/dist/css/bootstrap.css">
+    <script src="public/bower_components/jquery/dist/jquery.js"></script>
+    
+    <script src="public/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+
+  <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+       
+      <a class="navbar-brand" href="/">Article Store</a>
+    
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="navbar-nav mr-auto" href="/">Home |</a>
+          </li>
+          <li class="nav-item active">
+            <a class="navbar-nav" href="/add">    | Add</a>
+         
+          </li>
+   
+        </ul>
+      </div>
+    </nav>
+</head>
+
+<body>
+
+{{#each articles}}
+
+<div class="card card-outline-primary mb-3 text-center" style="border: black">
+  <div class="card-block">
+    <blockquote class="card-blockquote">
+      <span style="border: black">
+      <h4 class="card-title"><a href="/article/{{_id}}"><h1>{{title}}</a></h4>
+      <h6 class="card-subtitle mb-2 text-muted">{{author}}</h6>
+      <p class="card-text">{{body}}</p>
+      {{!--<a href="/edit/{{_id}}" class="card-link">Edit</a>--}}
+      </span>
+     </blockquote>
+  </div>
+</div>
+{{/each}}
+</body>  
+

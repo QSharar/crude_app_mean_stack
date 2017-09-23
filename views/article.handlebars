@@ -1,0 +1,38 @@
+<head>
+
+<link rel="stylesheet" href="/public/bower_components/bootstrap/dist/css/bootstrap.css">
+<script src="/public/bower_components/jquery/dist/jquery.js"></script>
+<script src="/public/bower_components/bootstrap/dist/js/bootstrap.js"></script>  
+
+
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+       
+      <a class="navbar-brand" href="/">Article Store</a>
+    
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="navbar-nav mr-auto" href="/">Home |</a>
+          </li>
+          <li class="nav-item active">
+            <a class="navbar-nav" href="/add">    | Add</a>
+         
+          </li>
+   
+        </ul>
+      </div>
+    </nav>
+
+</head>
+
+
+
+<h1>{{article.title}}</h1>
+<p>{{article.author}}</p>
+<p>{{article.body}}</p>
+
+<a href="/edit/{{article.id}}"><button>Edit</button></a>
+<form action="/delete/{{article.id}}" method="POST">
+    <button type="submit">DELETE</button>
+</form>
+
+
